@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "photo-portfolio-react",
+  "homepage": "https://docesforg.github.io/photo-portfolio-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
