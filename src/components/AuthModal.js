@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { API_URL } from './api';
 
 const AuthModal = ({ isOpen, onClose, onLogin }) => {
   const [formData, setFormData] = React.useState({

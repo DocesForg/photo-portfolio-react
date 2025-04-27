@@ -58,7 +58,7 @@ const AddPhotoModal = ({ isOpen, onClose }) => {
       });
 
       if (response.ok) {
-        const newPhoto = await response.json();
+        //const newPhoto = await response.json();
         onClose();
       } else {
         setError("Ошибка загрузки: " + response.statusText);

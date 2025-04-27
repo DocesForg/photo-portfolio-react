@@ -2,6 +2,14 @@ import React, { useEffect, useState, useMemo } from "react";
 import Modal from "./Modal";
 import { API_URL } from './api';
 
+
+const sortOptions = {
+  "date-desc": (a, b) => new Date(b.created_at) - new Date(a.created_at),
+  "date-asc": (a, b) => new Date(a.created_at) - new Date(b.created_at),
+  "likes-desc": (a, b) => b.likes_count - a.likes_count,
+  "likes-asc": (a, b) => a.likes_count - b.likes_count,
+};
+
 const GalleryPage = ({
   endpoint,
   pageTitle,
@@ -14,10 +22,10 @@ const GalleryPage = ({
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null); // Для открытого поста
 
-  const [vkScriptLoaded, setVkScriptLoaded] = useState(false); // Статус загрузки скрипта VK
+  //const [vkScriptLoaded, setVkScriptLoaded] = useState(false); // Статус загрузки скрипта VK
 
-  const [isImageOpen, setIsImageOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  //const [isImageOpen, setIsImageOpen] = useState(false);
+  //const [selectedImage, setSelectedImage] = useState("");
 
   const [users, setUsers] = useState({});
 
@@ -131,16 +139,11 @@ const GalleryPage = ({
     }
   };
 
-  const handleAddPhoto = (newPhoto) => {
-    setPosts((prevPosts) => [newPhoto, ...prevPosts]);
-  };
+  //const handleAddPhoto = (newPhoto) => {
+  //  setPosts((prevPosts) => [newPhoto, ...prevPosts]);
+  //};
 
-  const sortOptions = {
-    "date-desc": (a, b) => new Date(b.created_at) - new Date(a.created_at),
-    "date-asc": (a, b) => new Date(a.created_at) - new Date(b.created_at),
-    "likes-desc": (a, b) => b.likes_count - a.likes_count,
-    "likes-asc": (a, b) => a.likes_count - b.likes_count,
-  };
+  
 
   // Мемоизированный отсортированный массив
   const sortedPosts = useMemo(() => {

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { API_URL } from './api';
 
 const HomePage = ({ setCurrentPage }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [artistPosts, setArtistPosts] = useState([]); // Последние работы художника
-  const [photographerPosts, setPhotographerPosts] = useState([]); // Последние работы фотографа
+  //const [photographerPosts, setPhotographerPosts] = useState([]); // Последние работы фотографа
   const [statisticsData, setStatisticsData] = useState([]); // Статистика
 
   useEffect(() => {
